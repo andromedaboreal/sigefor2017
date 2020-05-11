@@ -1,0 +1,77 @@
+/* Scss Document */
+.sgWindow {
+  display: flex;
+  flex-direction: column; }
+  .sgWindow .body {
+    display: flex;
+    flex-direction: column; }
+    .sgWindow .body > span {
+      display: flex;
+      flex-direction: column;
+      height: 100%; }
+      .sgWindow .body > span form {
+        height: 100%;
+        display: flex;
+        flex-direction: column; }
+
+.sg-query-main {
+  _border: 2px solid #4f4f4f;
+  _padding: 2px;
+  _margin: 4px;
+  height: 100%;
+  _min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .sg-query-main .sg-query-text {
+    flex: 0 0 auto; }
+  .sg-query-main .sg-query-menu {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    border: 2px solid #4f4f4f; }
+    .sg-query-main .sg-query-menu input {
+      background: linear-gradient(#0ca5c8, #052d3f);
+      border: 1px solid #d7d7d7;
+      color: white;
+      height: 2em;
+      cursor: pointer; }
+      .sg-query-main .sg-query-menu input:hover {
+        background: linear-gradient(#0ca5c8, #0ca5c8); }
+  .sg-query-main .sg-query-body {
+    _border: 2px solid #00a40d;
+    border: 2px solid #4f4f4f;
+    flex: 1 1 auto;
+    overflow: auto;
+    height: 100%;
+    _width: 100%;
+    _max-width: 100%;
+    margin-top: 2px;
+    padding: 0px; }
+  .sg-query-main textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: auto; }
+  .sg-query-main table {
+    _padding: 1px;
+    _border: 10px solid #6f6f6f; }
+    .sg-query-main table td, .sg-query-main table th {
+      font-size: 8pt;
+      _max-height: 20px;
+      max-width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      padding: 2px; }
+    .sg-query-main table thead tr {
+      height: 2em;
+      background-color: #730205;
+      color: white; }
+    .sg-query-main table tbody tr:nth-child(2n+2) {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .sg-query-main table tbody td:hover {
+      _text-overflow: clip;
+      overflow: auto;
+      white-space: normal;
+      _max-width: 250px;
+      background-color: rgba(0, 255, 255, 0.2); }

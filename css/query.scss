@@ -1,0 +1,115 @@
+/* Scss Document */
+.sgWindow {
+	
+	display: flex;
+	flex-direction: column;
+	
+	.body{
+		
+		display: flex;
+		flex-direction: column;
+		
+		>span{
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			form{
+				height: 100%;
+				
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+	
+}
+.sg-query-main{
+	
+	_border: 2px solid rgba(79,79,79,1.00);
+	_padding: 2px;
+	_margin: 4px;
+	height: 100%;
+	_min-height: 300px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	
+	.sg-query-text{
+		flex:0 0 auto;
+		
+	}
+	.sg-query-menu{
+		flex:0 0 auto;
+		margin-top: 2px;
+		border: 2px solid rgba(79,79,79,1.00);
+		input{
+			background: linear-gradient(rgba(12,165,200,1), rgba(5,45,63,1));
+			border:1px solid rgba(215,215,215,1.00);
+			color:white;
+			height: 2em;
+			cursor: pointer;
+			&:hover{
+				background: linear-gradient(rgba(12,165,200,1), rgba(12,165,200,1));
+			}
+		}
+	}
+	.sg-query-body{
+		_border:2px solid rgba(0,164,13,1.00);
+		border: 2px solid rgba(79,79,79,1.00);
+		flex:1 1 auto;
+		overflow: auto;
+		height:100%;
+		_width:100%;
+		_max-width: 100%;
+		margin-top: 2px;
+		padding: 0px;
+	}
+	textarea{
+		width: 100%;
+		max-width: 100%;
+		margin:auto;
+	}
+	
+	table{
+		
+		
+		_padding: 1px;
+		_border:10px solid rgba(111,111,111,1.00);
+		
+		td,th{
+			font-size: 8pt;
+			
+			
+			_max-height: 20px;
+			max-width: 180px;
+			white-space: nowrap;
+			overflow: hidden;
+			-ms-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			padding:2px;			
+			
+		}
+		thead{
+			tr{
+				height: 2em;
+				background-color: rgba(115,2,5,1.00);
+				color:white;
+			}
+		}
+		tbody{
+			
+			tr:nth-child(2n+2){
+				background-color: rgba(0,0,0,0.10);
+
+			}
+			td:hover{
+				_text-overflow: clip;
+				overflow: auto;
+				white-space: normal;
+				_max-width: 250px;
+				background-color: rgba(0,255,255,0.20);
+			}
+		}
+			
+	}
+}
