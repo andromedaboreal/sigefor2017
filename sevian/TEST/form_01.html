@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<link href="../css/Menu.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgWindow.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgCalendar.css" rel="stylesheet" type="text/css"/>
+<link href="../css/selectText.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgTab.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgAjax.css" rel="stylesheet" type="text/css"/>
+<link href="../css/grid.css" rel="stylesheet" type="text/css"/>
+<link href="../css/main.css" rel="stylesheet" type="text/css"/>
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="menu"></div>
+<div id="form5">
+	<div data-sg-form-type="field" id="form5_nombre" class="field">
+		<div class="field-caption">
+			Nombre
+		</div>
+		<div class="field-input">
+			
+			<input name="nombre" value="yanny" class="input" type="text" id="nombre">
+				
+			
+		</div>
+	</div>
+	<div data-sg-form-type="field" id="form5_fecha">
+		<div class="field-caption">
+			(Fecha)
+		</div>
+		<div class="field-input">
+			<span data-sg-form-type="input" data-sg-type="sg-input-date" id="fecha">
+				<input name="fecha" value="2000-02-08" class="input" type="hidden" id="fecha1">
+				
+			</span>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+<form action="" id="miform">
+	<div id="f1" class="sg-form-main">
+		<div class="caption">Page Two - I</div>
+		
+		<div class="body">
+		
+		<div class="sg-page-main" id="a1">
+			<div class="caption">Uninity One</div>
+			<div class="body">One File</div>
+		</div>
+		<div class="sg-page-main" id="a2">
+			<div class="caption">Sector 24</div>
+			<div class="body">Plus XIII</div>
+		</div>
+		
+		
+			<div>
+				<div>Cédula</div>
+				<div><input name="cedula" type="text"></div>
+			</div>
+			<div>
+				<div>Nombre</div>
+				<div><input name="nombre" type="text"></div>
+			</div>	
+			<div>
+				<div>Edad</div>
+				<div><input name="fecha" type="text"></div>
+			</div>
+			
+			<div class="sg-page-main" data-page-id="p1"  id="a3">
+				<div class="caption">Prueba</div>
+				<div class="body"> HR<hr>
+					<div class="sg-page-main"  id="a4">
+						<div class="caption">DOS</div>
+						<div class="body">Case II</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab_01" class="sg-tab-main" data-sg-type = "sg-tab">
+				<div class="sg-tab-menu">
+					<a class="sg-tab-imenu sg-tab-active">Option 1</a>
+					<a class="sg-tab-imenu">Option 2</a>
+					<a class="sg-tab-imenu">Option 3</a>
+				</div>
+
+				<div class="sg-tab-body">
+					<div class="sg-tab-ibody sg-tab-active">Unsigned Locked</div>
+					<div class="sg-tab-ibody">Main Stage</div>
+					<div class="sg-tab-ibody">Var Submit</div>
+				</div>
+			</div>				
+			
+		</div>
+		
+	</div>	
+	
+
+	
+</form>
+<hr>
+<div id="tab_" class="sg-tab-main" data-sg-type = "sg-tab">
+	<div class="sg-tab-menu">
+		<a class="sg-tab-imenu sg-tab-active">Option K1</a>
+		<a class="sg-tab-imenu">Option K2</a>
+		<a class="sg-tab-imenu">Option K3</a>
+	</div>
+
+	<div class="sg-tab-body">
+		<div class="sg-tab-ibody sg-tab-active">Page K1</div>
+		<div class="sg-tab-ibody">Page K2</div>
+		<div class="sg-tab-ibody">Page K3</div>
+	</div>
+</div>
+
+<div id="tab_2" class="sg-tab-main" data-sg-type = "sg-tab">
+	<div class="sg-tab-menu">
+		<a class="sg-tab-imenu sg-tab-active">Option Q1</a>
+		<a class="sg-tab-imenu">Option Q2</a>
+		<a class="sg-tab-imenu">Option Q3</a>
+	</div>
+
+	<div class="sg-tab-body">
+		<div class="sg-tab-ibody sg-tab-active">Page Q1</div>
+		<div class="sg-tab-ibody">
+			<hr>
+			<div id="tab_3" class="sg-tab-main" data-sg-type = "sg-tab">
+				<div class="sg-tab-menu">
+					<a class="sg-tab-imenu sg-tab-active">Option A1</a>
+					<a class="sg-tab-imenu">Option A2</a>
+					<a class="sg-tab-imenu">Option A3</a>
+				</div>
+
+				<div class="sg-tab-body">
+					<div class="sg-tab-ibody sg-tab-active">Page A1</div>
+					<div class="sg-tab-ibody">Page A2</div>
+					<div class="sg-tab-ibody">Page A3</div>
+				</div>
+			</div>	
+		</div>
+		<div class="sg-tab-ibody">Page Q3</div>
+	</div>
+</div>	
+<hr>
+
+<div class="sg-page-main">
+	<div class="caption">END</div>
+	<div class="body">HP K-1000</div>
+</div>
+
+<script src="../_js/_sgQuery.js"></script>
+<script src="../js/sgAjax.js"></script>
+<script src="../js/Sevian/Drag.js"></script>
+<script src="../js/Sevian/Window.js"></script>
+<script src="../js/Sevian/Menu.js"></script>
+<script src="../../sigefor2017/js/sgTipsPopup.js"></script>
+<script src="../js/sgDB.js"></script>
+<script src="../js/sgInit.js"></script>
+<script src="../js/sgSevian.js"></script>
+<script src="../js/Sevian/Tab.js"></script>
+
+<script src="../js/Sevian/Valid.js"></script>
+<script src="../js/sgCalendar.js"></script>
+<script src="../js/Sevian/Form.js"></script>
+<script src="../js/Sevian/Input.js"></script>
+<script src="../js/Sevian/Multi.js"></script>
+<script src="../js/Sevian/SelectText.js"></script>
+<script>
+(function($){
+	
+	var menu = new Sevian.Menu({
+		target:"menu",
+		caption:"Menu Principal",
+		"className":[null,"vertical"],"type":"default","pullDeltaX":10,"pullDeltaY":10,
+		
+		items:[
+			{"id":7,"parentId":false,"caption":"Consulta A7"},
+			{"id":8,"parentId":false,"caption":"Consulta A8"},
+			{"id":9,"parentId":false,"caption":"Consulta A9", 
+			events:{click:function(){this.setCaption('bye');}}},
+			
+
+			
+		],
+		
+	});
+	
+	
+	menu.add({
+		"id":0,"parentId":false,"caption":"Registro de Actividades"
+	});
+	
+	menu.add({
+		"id":1,"parentId":false,"caption":"Consulta de Actividades"
+	});
+	
+	menu.add({
+		"id":2,"parentId":false,"caption":"Consulta 2"
+	});
+	menu.add({
+		"id":3,"parentId":2,"caption":"Consulta 3"
+	});
+	menu.add({
+		"id":4,"parentId":2,"caption":"Consulta 4"
+	});
+	menu.add({
+		"id":5,"parentId":2,"caption":"Consulta 5"
+	});
+	menu.add({
+		"id":6,"parentId":2,"caption":"Consulta 6"
+	});
+	var z = new Sevian.Form({
+		main:"#form5",
+		
+		
+		
+		
+		
+		fields:[
+			{	
+				control: "SelectText",
+				caption:"Número Factura...",
+				name:"id_factura",
+				rules:{
+					required_:true,
+					email_:true,
+				},
+				input:{
+					type:"default",
+					data:[
+					[0,"esteban"],
+					[1,"yanny"],
+					[2,"núñez"],
+					[3,"jiménez"],
+					[4,"ann"],
+					[5,"caracas"],
+					[6,"esteban"],
+					[7,"yanny"],
+					[8,"núñez"],
+					[9,"jiménez"],
+					[10,"ann"],
+					[11,"caracas"],
+					[12,"esteban"],
+					[13,"yanny"],
+					[14,"núñez"],
+					[15,"jiménez"],
+					[16,"ann"],
+					[17,"caracas"],
+					
+				]
+				},
+				
+			}
+			
+			
+			
+		],
+	
+	});
+	z.addField({
+		caption:"Lotes",
+		//control:"DateInput",
+		//main:"#form5_nombre",
+		control:"SelectText",
+		input:{
+			type:"text",
+			//main:"#nombre",
+			value:"",
+			placeholder:"...seleccione",
+			style:{
+				color:"red"
+			},
+			
+			data_:[
+				[1, "hola"],
+				[2, "Adios"],
+				[3, "Pepe"]
+				
+				
+			],
+			
+			loadData: function(filter){
+				var data = [
+					[1, "BMW"],
+					[2, "Audi"],
+					[3, "Ferrari"]
+
+
+				];
+				this.setData(data);
+				
+				this.evalText(filter);
+			}
+		},
+		comment: "hola",
+		rules:{
+			required:true,
+			alpha:true,
+		}
+		
+		
+	});
+	z.addField({
+		caption:"Nombre y Apellido",
+		//control:"DateInput",
+		main:"#form5_nombre",
+		input:{
+			type:"text",
+			main:"#nombre",
+			value:"Nuñez Jimenez",
+			placeholder:"...seleccione",
+			style:{
+				color:"red"
+			}
+		},
+		comment: "hola",
+		rules:{
+			required:true,
+			alpha:true,
+		}
+		
+		
+	});
+	
+	z.addField({
+		caption:"Fecha Nacimiento",
+		main:"#form5_fecha",
+		//id:"fecha",
+		control:"DateInput",
+		input:{
+			
+			type:"text",
+			main:"#fecha",
+			value:'2001-04-30',
+			events:{
+				click: function(){
+					
+				}
+			}
+		}
+	
+	
+	});
+	
+	
+	z.addField({
+		caption:"Prueba",
+		input:{
+			type:"select",
+			value:3,
+			data:[
+				["","-- SElECCIONE"],
+				[1,"Valencia"],
+				[2, "caracas"],
+				[3, "merida"]
+				
+			],
+			
+		},
+		
+		rules:{
+			required:true,
+			
+		}
+		
+		
+	});
+	z.addField({
+		caption:"Prueba2",
+		input:{
+			control: "Multi",
+			type:"checkbox",
+			name:"multix",
+			value:"4,5",
+			data:[
+				["","-- SELECCIONE"],
+				[1,"Valencia"],
+				[2, "Caracas"],
+				[3, "Mérida"],
+				[4, "San Crsitobal"],
+				[5, "Barquisimeto"],
+				[6, "Maracaibo"]
+				
+			],
+			
+			style:{
+				color:"red"
+			}
+			
+		},
+		
+		rules:{
+			required:true,
+			
+		}
+		
+		
+	});
+	
+	z.addInput({
+		locatePage:-1,
+		input: {
+			
+			type:"button",
+			value:"OK",
+			events:{
+				click: function(){
+					db("valid")
+					z.valid();
+				}
+			}
+		}
+		
+	});
+	
+	
+	
+	
+	
+	var m = new Sevian.Form({id:"d_01", target:$("")});
+	
+	m.addPage({caption:"page one"});
+	m.addTab({caption:"page one"});
+	m.addTabPage({title:"Basic 1.0"});
+	
+	
+	m.addField({
+		
+		type: "Input",
+		
+		caption:"cedula",
+		rules:{
+			
+			required:{},
+			
+		},
+		input:{
+			name:"nombre",
+			type: "text",
+		}
+		
+		
+	});	
+	m.addField({
+		caption: "Fecha de Nacimiento",
+		control:"DateInput",
+		rules:{
+			
+			date:{_value:'%y-%d-%m'},
+			
+		},
+		input: {
+			
+			type:"text",
+			name:"fecha",
+		}
+		
+		
+	});
+	
+	m.addTabPage({title:"Advance 10"});
+	m.addInput({
+		locatePage:-1,
+		input: {
+			
+			type:"button",
+			value:"OK",
+			events:{
+				click: function(){
+					db("valid")
+					m.valid();
+				}
+			}
+		}
+		
+	});
+	
+	
+	var f = new Sevian.Form({
+			main:"f1",
+			//create:false,
+			//id: "f1",
+			className: "soho",
+			//target:"main",
+			caption: "Registro de Personal",
+
+
+	});	
+	//return;
+	f.pages[2].setCaption("Hola a todos");
+
+	var tab = new Tab({main:$("#tab_"), value:0});
+	var tab2 = new Tab({main:$("#tab_2"), value:0});
+	var tab3 = new Tab({main:$("#tab_3"), value:0});
+	
+	
+	f.addField({
+		locatePage:1,
+		locateTab:1,
+		caption: "Número",
+		comment: "Número de seguro social",
+		
+		inputClass : "",
+		
+		input:{
+
+
+			
+			type: "calendar",
+
+			_id:"pass",
+			value: "2016-11-30",
+			events:{
+				click:function(){
+
+				}
+			}
+		}
+	});	
+	
+	
+	f.addTab({locatePage:3,locateTab:0,value:1});
+	f.addTabPage({title:'Yahoo'});
+	
+	f.addField({
+		
+		caption:"Nombre",
+		input:{
+			input : "",
+			"type":"text"
+		}
+		
+	});
+	f.addField({
+		
+		caption:"Apellido",
+		input:{
+			input : "",
+			"type":"text"
+		}
+		
+	});
+	
+	
+	f.addTabPage({title:'Altavista'});
+	f.addField({
+		
+		caption:"Buscador",
+		input:{
+			input : "DateInput",
+			"type":"calendar"
+		}
+		
+	})
+	
+	//var pg = f.myPage(0);
+	
+
+})(_sgQuery);		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../themes/calido/css/popup.css">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<div id="grid2" data-sg-grid-type="main">
+  <table width="200" border="2" cellspacing="2" cellpadding="2" data-sg-grid-type="table">
+    <tbody>
+      <tr data-sg-grid-type="th">
+        <td>Id</td>
+        <td>Nombre</td>
+        <td>Edad</td>
+      </tr>
+      <tr data-sg-grid-type="tr">
+        <td>1</td>
+        <td>Yanny</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Esteban</td>
+        <td>41</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ann</td>
+        <td>30</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<div id="grid">
+
+</div>
+
+</body><script src="../js/sgPopup.js"></script><script src="_sgQuery.js"></script>
+<script src="_sgWinDB.js"></script>
+<script>
+
+
+
+
+
+
+
+
+
+(function($){
+
+
+	var _grid = function(opt){
+		this._table = false;
+		for(var x in opt){
+			this[x] = opt[x];
+		}
+		
+		
+	};
+
+	_grid.prototype = {
+		
+		load: function(){
+			
+			
+			var d = $(this.id);
+
+			if(d.get().tagName == "TABLE" || d.get().dataset.sgGridType == "table"){
+				this._table = d.get();
+				return;
+				
+			}
+			
+
+			
+
+
+			var ch = d.get().childNodes;
+			
+			
+			for(var x = 0; x < ch.length; x++){
+				
+				if(ch[x].tagName == "TABLE"){
+					this._table = ch[x];
+					break;	
+				}
+				
+
+			}
+			
+			
+		},
+		insert: function(data){
+			var cell = false;
+			var row = this._table.insertRow(0);
+			
+			for(var x in data){
+				cell = row.insertCell();
+				
+				cell.innerHTML = data[x];
+				
+			}
+			
+		},
+		
+		
+		
+		
+	};
+
+
+var gg = new _grid({id:"grid2"});
+
+gg.load();
+
+gg.insert([4,"Jose","20"]);
+gg.insert([5,"Yrian","21"]);
+
+gg.insert([6,"Jose","33"]);
+gg.insert([7,"Lopez","51"]);
+
+
+
+	var g = $("#grid");
+	
+	g.text("hola");
+
+	var grid = function(opt){
+		
+		for(var x in opt){
+			
+			this[x] = opt[x];	
+		}
+		
+	};
+	
+	
+	grid.prototype = {
+		
+		create: function(){
+			
+			
+		},
+		
+		
+	};
+	
+	
+	
+	
+
+	var g = new grid({
+		
+		caption:"Hola",
+		show:{},
+		fileds:{
+			nombre:{
+				title:"Nombre",
+				class:"xxx",
+				type:"text",
+					
+				
+			}	
+			
+		},
+searches: [
+        { field: 'lname', caption: 'Last Name', type: 'text' },
+        { field: 'fname', caption: 'First Name', type: 'text' },
+        { field: 'email', caption: 'Email', type: 'text' },
+    ],
+    sortData: [{ field: 'recid', direction: 'ASC' }],				
+		
+		
+		
+	});
+
+
+
+})(_sgQuery);
+
+
+
+</script>
+
+</html>

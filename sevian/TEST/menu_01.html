@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<!--<link href="../css/_seniat_2017.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgMenu.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgWindow.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgCalendar.css" rel="stylesheet" type="text/css"/>
+<link href="../css/selectText.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgTab.css" rel="stylesheet" type="text/css"/>
+<link href="../css/sgAjax.css" rel="stylesheet" type="text/css"/>
+<link href="../css/grid.css" rel="stylesheet" type="text/css"/>
+<link href="../css/main.css" rel="stylesheet" type="text/css"/>
+<link href="../css/form.css" rel="stylesheet" type="text/css">-->
+
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/Menu.css">
+<link rel="stylesheet" type="text/css" href="../css/sgWindow.css">
+<link rel="stylesheet" type="text/css" href="../css/sgCalendar.css">
+<link rel="stylesheet" type="text/css" href="../css/selectText.css">
+<link rel="stylesheet" type="text/css" href="../css/sgTab.css">
+<link rel="stylesheet" type="text/css" href="../css/sgAjax.css">
+
+
+</head>
+
+<body>
+<div id="menu_01"></div>
+
+<div id="menu2"></div>
+
+<div id="menu1" class="sg-menu" style="width: 300px">
+	<div class="caption">Menú Principal</div>
+	<ul class="menu">
+		<li class="item close">
+			<div class="option">
+				<div class="icon sx"></div>
+				<span class="caption">Opcion Uno</span>
+			</div>
+		</li>
+		<li class="item close">
+			<div class="option">
+				<div class="checkbox"><input type="checkbox" tabindex="-1"></div>
+				<div class="icon"></div>
+				<span class="caption">Opcion Dos Alpha</span>
+			</div>
+		</li>
+		<li class="item close">
+			<div class="option">
+				<div class="icon"></div>
+				<span class="caption">Opcion Tres</span>
+			</div>
+			<ul class="submenu popup">
+				<li class="item close">
+					<div class="option">
+						<div class="icon"></div>
+						<span class="caption">Opcion S Uno</span>
+					</div>
+				</li>
+				<li class="item close">
+					<div class="option">
+						<div class="icon"></div>
+						<span class="caption">Opcion S Dos</span>
+					</div>
+				</li>
+				<li class="item close">
+					<div class="option">
+						<div class="icon"></div>
+						<span class="caption">Opcion S Tres</span>
+					</div>
+				</li>
+			</ul>			
+		</li>
+		<li class="item close">
+			<div class="option">
+				<div class="icon"></div>
+				<span class="caption">Opcion Cuatro</span>
+			</div>
+		</li>
+		<li class="item close">
+			<div class="option">
+				<div class="icon"></div>
+				<span class="caption">Opcion Cinco</span>
+			</div>
+			<ul class="submenu popup">
+				<li class="item close">
+					<div class="option">
+						<div class="icon"></div>
+						<span class="caption">Opcion K Uno</span>
+					</div>
+				</li>
+				<li class="item close">
+					<div class="option">
+						<div class="icon"></div>
+						<span class="caption">Opcion K Dos</span>
+					</div>
+				</li>
+				<li class="item close">
+					<div class="option">
+						<div class="icon"></div>
+						<span class="caption">Opcion K Tres</span>
+					</div>
+				</li>
+			</ul>	
+		</li>
+	</ul>
+	
+	
+</div>
+
+
+</body>
+<script src="../_js/_sgQuery.js"></script>
+<script src="../js/sgAjax.js"></script>
+<script src="../js/Sevian/Drag.js"></script>
+<script src="../js/Sevian/Window.js"></script>
+<script src="../js/Sevian/Menu.js"></script>
+<script src="../js/sgMenu.js"></script>
+<script src="../../sigefor2017/js/sgTipsPopup.js"></script>
+<script src="../js/sgDB.js"></script>
+<script src="../js/sgInit.js"></script>
+<script src="../js/sgSevian.js"></script>
+<script src="../js/Sevian/Tab.js"></script>
+
+<script src="../js/Sevian/Valid.js"></script>
+<script src="../js/sgCalendar.js"></script>
+<script src="../js/Sevian/Form.js"></script>
+<script src="../js/Sevian/Input.js"></script>
+<script>
+	var menu = new Sevian.Menu({
+		main:"menu1",className: "menu",
+		caption:"Menú Principal",
+		"className":["sg_menu","accordion"],"type":"default","pullDeltaX":10,"pullDeltaY":10,
+		wCheck: true,
+		wIcon:true,
+		
+		oncheck: function(checked, index, parent, level){
+			
+			//db(this.index)
+		},
+		
+		
+	});
+	menu.add({index:menu.getIndex(), caption: "Extra...", parent : 0, _action:"alert(1)", icon:"../../Iconos/book.png", wCheck: true});
+	//menu.getIndex();
+	
+		
+	
+	var menu = new Sevian.Menu({
+		wCheck: true,
+		wIcon:true,
+		target:"#menu2",
+		caption:"Menu Principal 2",
+		"className":false,"type":"default","pullDeltaX":10,"pullDeltaY":10,
+		oncheck: function(checked, index, parent, level){
+			
+			//db(menu.type)
+		},
+	});
+	
+	
+	menu.add({index:0, caption: "uno", parent : false, _action:"alert(1)", icon:"../../Iconos/book.png", wCheck: true});
+	menu.add({index:1, caption: "dos", parent : false, _action:"alert(1)", icon:"../../Iconos/user.png"});
+	menu.add({index:2, caption: "tres", parent : false, _action:"alert(1)", icon:"../../Iconos/paste.png"});
+	menu.add({index:3, caption: "Alpha", parent : 2, _action:"alert(1)", icon:"../../Iconos/Register.png"});
+	menu.add({index:4, caption: "Beta", parent : 2, _action:"alert(1)", icon:"../../Iconos/login.png"});
+	menu.add({index:5, caption: "Gamma", parent : 1, _action:"alert(1)", icon:"../../Iconos/client.png", urlTarget: "pepe", url:"gamma/uno.html"});
+	menu.add({index:6, caption: "Delta", parent : 1, _action:"alert(1)", icon:"../../Iconos/database.png"});
+	
+	menu.add({index:7, caption: "71", parent : false, _action:"alert(1)", icon:"../../Iconos/Select-language.png"});
+	menu.add({index:8, caption: "8", parent : 7, _action:"alert(1)"});
+	menu.add({index:9, caption: "9", parent : 7, _action:"alert(1)"});
+	menu.add({index:10, caption: "10", parent : 7, _action:"alert(1)"});	
+	
+	
+	menu.add({index:11, caption: "OPtion 11", parent : 6, action:"alert(11)"});
+	menu.add({index:12, caption: "OPtion 12", parent : 6, action:"alert(12)"});
+	menu.add({index:13, caption: "OPtion 13", parent : 6, action:"alert(13)"});	
+	
+	menu.add({index:menu.getIndex(), caption: "Extra...", parent : 0, _action:"alert(1)", icon:"../../Iconos/book.png", wCheck: true});
+	
+	var menu = new Sevian.Menu({
+		wCheck: true,
+		target:"#menu2",
+		caption:"Menu Principal 2",
+		wIcon:true,
+		"className":false,"type":"accordiony","pullDeltaX":10,"pullDeltaY":10
+	});
+	
+	
+	menu.add({index:0, caption: "uno", parent : false, _action:"alert(1)", classImage:"sx"});
+	menu.add({index:1, caption: "dos", parent : false, _action:"alert(1)", icon:"../../Iconos/edit.png"});
+	menu.add({index:2, caption: "tres", parent : false, _action:"alert(1)", icon:"../../Iconos/delete.png"});
+	menu.add({index:3, caption: "Alpha", parent : 2, _action:"alert(1)", icon:"../../Iconos/Register.png"});
+	menu.add({index:4, caption: "Beta", parent : 2, _action:"alert(1)", icon:"../../Iconos/login.png"});
+	menu.add({index:5, caption: "Gamma", parent : 1, _action:"alert(1)", icon:"../../Iconos/client.png"});
+	menu.add({index:6, caption: "Delta", parent : 1, _action:"alert(1)", icon:"../../Iconos/database.png"});
+	
+	menu.add({index:7, caption: "71", parent : false, _action:"alert(1)", icon:"../../Iconos/calendar.png"});
+	menu.add({index:8, caption: "8", parent : 7, _action:"alert(1)"});
+	menu.add({index:9, caption: "9", parent : 7, _action:"alert(1)"});
+	menu.add({index:10, caption: "10", parent : 7, _action:"alert(1)"});	
+	
+	
+	
+	
+	if(1==2){
+		
+		var m = new _menu(
+	{
+		id: "menu45",
+		target: "#menu_01",
+		className: "menu",
+		type: "default",
+		caption:"Menú Secundario1",
+			
+		wCheck: true,
+		check:function(value, id, parent, level){
+			//alert(value)
+			db(444+"..."+id+"---"+value+" level: "+level);
+			
+		}		
+		
+	}
+);
+	
+	
+	m.add({
+		id:0,
+		parent:false,
+		text:"opcion 0",
+		checked: true,
+		_className:"uu",
+		icon:"images/history_02.png",
+		child:"<hr>Hola<hr>",
+		_wCheck:false,
+	
+		_events:{
+			click:function(){alert(this.text)},
+			dblclick:"alert(777)"	
+		}
+
+	});
+
+
+	m.add({
+		id:1,
+		parent:0,
+		text:"opcion 1",
+		class:"",
+		icon:"images/maps_02.png",
+		check:"",
+		_sep:true,
+		events:{
+			click:"alert(this.text);",
+		}
+
+	});
+
+
+	m.add({
+		id:2,
+		parent:false,
+		text:"opcion 2",
+		class:"",
+		icon:"",
+		check:"",
+		_mode:"open",
+
+
+	});
+
+	m.add({
+		id:3,
+		parent:false,
+		text:"opcion 3",
+		class:"",
+		icon:"",
+		check:""
+
+
+	})
+	m.add({
+		id:4,
+		parent:2,
+		text:"opcion 4",
+		class:"",
+		icon:"images/history_02.png",
+		wCheck: true,
+		_disabled: true,
+
+
+	})
+	m.add({
+		id:5,
+		parent:2,
+		text:"opcion 5",
+		class:"",
+		icon:"",
+		check:"",
+		_disabled: true,
+
+
+	});
+
+
+	m.add({
+		id:6,
+		parent:4,
+		text:"opcion 6",
+		class:"",
+		icon:"images/history_02.png",
+		check:""
+
+
+	});
+
+	m.add({
+		id:7,
+		parent:4,
+		text:"opcion 7",
+		class:"",
+		icon:"",
+		check:""
+
+
+	});
+
+	m.add({
+		id:8,
+		parent:6,
+		text:"opcion 8",
+		class:"",
+		icon:"",
+		check:""
+
+
+	});
+
+	
+	
+	
+	m.add({
+		id:9,
+		parent:6,
+		text:"opcion 9",
+		class:"",
+		icon:"",
+		check:"",
+		_sep:true
+
+
+	});
+
+	m.add({
+		id:10,
+		parent:9,
+		text:"opcion 10",
+		class:"",
+		icon:"",
+		check:""
+
+
+	});
+
+	m.add({
+		id:11,
+		parent:9,
+		text:"opcion 11",
+		class:"",
+		icon:"",
+		check:""
+
+
+	});
+
+
+	m.add({
+		id:12,
+		parent:6,
+		text:"opcion 12",
+		class:"",
+		icon:"",
+		check:"",
+		
+		action:function(){db("action...");},
+		events:{
+			click:function(){db(88)},
+			dblclick:"db(777)"	
+		}
+
+
+	});
+
+	m.add({
+		id:13,
+		parent:12,
+		text:"opcion 13",
+		class:"",
+		icon:"",
+		check:""
+
+	});
+
+	m.add({
+		id:14,
+		parent:12,
+		text:"opcion 14",
+		class:"",
+		icon:"",
+		check:""
+
+	});
+
+
+	m.add({
+		id:15,
+		parent:14,
+		text:"opcion 15",
+		class:"",
+		icon:"",
+		check:""
+
+	});
+	m.add({
+		id:16,
+		parent:14,
+		text:"opcion 16",
+		class:"",
+		icon:"",
+		check:""
+
+	});
+
+	m.add({
+		id:17,
+		parent:16,
+		text:"opcion 17",
+		class:"",
+		icon:"",
+		check:""
+
+	});
+	m.add({
+		id:18,
+		parent:16,
+		text:"opcion 18",
+		class:"",
+		icon:"",
+		check:""
+
+	});
+
+	m.add({
+		id:19,
+		parent:3,
+		text:"opcion 19",
+		class:"",
+		icon:"",
+		check:""
+
+	});	
+
+		m.add({
+		id:20,
+		parent:4,
+		text:"opcion 20",
+		class:"",
+		icon:"images/history_02.png",
+		check:""
+
+
+	});
+	
+	m.add({
+		id:21,
+		parent:4,
+		text:"opcion 21",
+		class:"",
+		icon:"images/history_02.png",
+		check:""
+
+
+	});
+		
+	}
+	
+
+		
+</script>
+</html>

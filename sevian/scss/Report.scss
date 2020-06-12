@@ -1,0 +1,243 @@
+/* Scss Document */
+body{
+	font-family: tahoma;
+	font-size: 9pt;
+}
+
+img {
+    //-webkit-filter: grayscale(80%); /* Safari */
+    //filter: grayscale(100%);
+}
+
+@media print{
+	body{
+		font-family: tahoma;
+		font-size: 9pt;
+	}
+    @page{
+        size: letter portrait;
+        margin: 0.8cm;
+    }
+}
+
+
+
+@media screen{
+	body{
+		background-color: rgba(135,135,135,1.00);
+		background-color: rgba(109,117,131,1.00);
+		font-family: tahoma;
+		font-size: 9pt;
+	}
+	@page{ 
+		size: auto;   /* auto is the initial value */ 
+		size: letter portrait ;
+		//portrait , landscape
+		/* this affects the margin in the printer settings */ 
+		margin: 0.8cm;  
+	} 
+	
+   .main{
+	   	background-color: white;
+		margin:48px; 
+		padding:48px;
+		border:solid 1px #CCC; 
+		box-shadow: 2px 2px 4px #888888;
+		height:1050px;
+		width:800px; 
+	   
+	}
+}
+
+
+html,body{
+	
+	margin: 0px;
+	padding: 0px;
+	//font-size: 14pt;
+}
+*{
+	box-sizing: border-box;
+}
+$form-field-border: 1px solid rgba(160,160,160,1.00);
+$font: Verdana, Geneva, sans-serif;
+.header{
+	*{
+		font-size: 7pt;
+		font-family: $font;
+	}
+	
+	.form-caption{
+		background-color: rgba(211,211,211,1.00);
+		text-align: center;
+		font-weight: bold;
+		padding: 4px;
+		font-size: 10pt;
+		border-bottom: $form-field-border;
+		margin-bottom: 10px;
+	}
+	
+	.form-main{
+		display: flex;
+		flex-direction: row;
+		flex-flow: wrap;
+		justify-content: space-between;
+		border: $form-field-border;
+		.form-caption{
+			//border:3px solid gray;
+			background-color: rgba(71,71,71,1.00);
+			color:white;
+			display: block;
+			font-size: 11pt;
+			text-align: center;
+			font-weight: bold;
+			width: 100%;
+			line-height: 1.5em;
+			vertical-align: middle;
+		}
+		
+	}
+	
+	.form-field{
+		flex: 1 1  auto;
+		//display: flex;
+		border:1px solid rgba(152,152,152,1.00);
+		border:1px solid rgba(193,193,193,1.00);
+		border: $form-field-border;
+		flex-direction: column;
+		flex-flow: wrap;
+		justify-content: space-between;
+		padding:2px;
+		margin:4px;
+		.field-caption{
+			margin:2px;
+			flex:1 1  auto;
+			//border:1px solid blue;
+			font-weight: bold;
+		}
+		.field-input{
+			margin:2px;
+			flex:1 1  auto;
+			//border:1px solid blue;
+		}
+		
+	}
+	
+	
+}
+
+.main{
+	page-break-after: always;
+	
+	.report-title{
+		
+		
+		text-align: center;
+		font-size: 10pt;
+		font-weight: bold;
+	}
+	
+	.page{
+		height: 100%;
+		width: 100%;
+		
+	}
+	
+	.page{
+		//border:1px solid red;
+		
+		_margin: 40px;
+		//height: 100%;
+		//width: 100%;
+		display: flex;
+		flex-direction: column;
+		
+		.header{
+			flex: 0 0 50px;
+			padding: 4px 0px 4px 0px;
+			border-bottom: 1px solid rgba(81,81,81,1.00);
+			//border:1px solid red;
+		}
+		.body{
+			flex: 1 1 auto;
+			//border:1px solid rgba(156,156,156,1.00);
+			//display: table;
+			
+			.row{
+				display: table-row;
+				border:2px solid rgba(195,78,80,1.00);
+				.hcell{
+					text-align: center;
+					font-weight: bold;
+				}
+				.cell{
+					display: table-cell;
+					//border: 1px solid rgba(189,140,141,1.00);
+					border-bottom: 1px dotted black;
+					padding: 3px;
+					margin: 1px;
+				}
+			}
+		}
+		.footer{
+			flex: 0 0 50px;
+			padding: 4px 0px 4px 0px;
+			//border:1px solid red;
+		}
+		
+	}
+	
+	.footer{
+		margin-top: 10px;
+		table{
+			border-top: 1px solid rgba(81,81,81,1.00);
+		}
+		
+	}
+	
+}
+
+
+.main_{
+	height: 100%;	
+	
+	
+	._page:nth-of-type(2){
+		background-color: rgba(57,57,57,1.00)!important;
+		//page-break-before: avoid;
+		margin: 5px;
+		padding: 20px;
+	}
+	
+	
+}
+
+
+.main_{
+	border:2px solid rgba(204,204,204,1.00);
+	
+	.group{
+		padding: 1px;
+			margin: 1px;
+		border: 1px solid rgba(189,140,141,1.00);
+	}
+	
+	
+	
+	
+	.row{
+		
+		.cell{
+			display: inline-block;
+			border: 1px solid rgba(189,140,141,1.00);
+			padding: 1px;
+			margin: 1px;
+		}
+	}
+}
+
+.report{
+	
+	
+	
+}
