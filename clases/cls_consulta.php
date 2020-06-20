@@ -535,7 +535,7 @@ class cls_consulta extends cfg_consulta{
 				
 				$script_linea .= (($script_linea!="")?",":"")."\"".addslashes($texto)."\"";
 				if($this->elem[$c]->subformulario == ""){
-					if(isset($rs[$this->elem[$c]->padre]) and isset($this->elem[$c]->padre) 
+					if(isset($rs[$this->elem[$c]->padre]) and isset($this->elem[$c]->padre) and $this->elem[$c]->padre
 					   
 					   and isset($this->elem[$c]->data[$rs[$this->elem[$c]->padre]]) 
 					   
